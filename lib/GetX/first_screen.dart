@@ -18,9 +18,11 @@ class FirstScreen extends StatelessWidget {
                       Get.to : 간단하게 화면 이동
                       Get.toNamed : getpages 속성에 추가된 name 으로 이동
                       Get.off
-                      Get.offAll() 
+                      Get.offAll()
                  */
-                ElevatedButton(onPressed : () => Get.to('/second'), child: Text('Move Second Screen'))
+                ElevatedButton(onPressed : () => Get.toNamed('/second'), child: Text('toNamed Second Screen')),
+                ElevatedButton(onPressed : () => Get.toNamed('/third'), child: Text('toNamed Third')),
+                ElevatedButton(onPressed : () => Get.back(), child: Text('Back'))
               ],
             ),
           )

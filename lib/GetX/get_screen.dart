@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toy_flutter/GetX/first_screen.dart';
+import 'package:toy_flutter/GetX/fourth_screen.dart';
 import 'package:toy_flutter/GetX/second_screen.dart';
 import 'package:toy_flutter/GetX/status_controller.dart';
+import 'package:toy_flutter/GetX/third_screen.dart';
 
 class GetApp extends StatelessWidget {
  // final statusController = Get.put(StatusController()); // GetxController를 init
@@ -19,6 +21,8 @@ class GetApp extends StatelessWidget {
         getPages: [
           GetPage(name: '/', page: () => FirstScreen()),
           GetPage(name: '/second', page : () => SecondScreen()),
+          GetPage(name: '/third', page : () => ThirdScreen()),
+          GetPage(name: '/fourth', page : () => FourthScreen()),
       ],
     );
     /*  GetX react / non-react 진행

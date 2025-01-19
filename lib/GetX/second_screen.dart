@@ -13,7 +13,9 @@ class SecondScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    ElevatedButton(onPressed : () => Get.to('/first'), child: Text('Move first Screen'))
+                    ElevatedButton(onPressed : () => Get.toNamed('/'), child: Text('toNamed First Screen')),
+                    ElevatedButton(onPressed : () => Get.toNamed('/third'), child: Text('toNamed Third')),
+                    ElevatedButton(onPressed : () => Get.back(), child: Text('Back'))
                   ],
                   ),
               )
