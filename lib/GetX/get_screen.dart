@@ -1,14 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:toy_flutter/GetX/first_screen.dart';
+import 'package:toy_flutter/GetX/second_screen.dart';
 import 'package:toy_flutter/GetX/status_controller.dart';
 
 class GetApp extends StatelessWidget {
-  final statusController = Get.put(StatusController()); // GetxController를 init
+ // final statusController = Get.put(StatusController()); // GetxController를 init
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-
+    /*
+      GetX 사용 시 root 에만 GetMaterialApp을 사용해야함.
+     */
+    return GetMaterialApp(
+      title: 'Toy GetX',
+      initialRoute: '/',
+        getPages: [
+          GetPage(name: '/', page: () => FirstScreen()),
+          GetPage(name: '/second', page : () => SecondScreen()),
+      ],
+    );
+    /*  GetX react / non-react 진행
       return MaterialApp(
         home: Scaffold(
           appBar: AppBar(),
@@ -49,6 +62,10 @@ class GetApp extends StatelessWidget {
                   fontSize: 20, color: Colors.white),
                   ))),
                 ),
+                ElevatedButton(onPressed: () =>
+                    Get.to(() => SecondScreen()), child: const Text(
+                  'move second screen'
+                ))
               ],
             )
           ),
@@ -59,6 +76,6 @@ class GetApp extends StatelessWidget {
               },
           )
         )
-      );
+      );*/
   }
 }
