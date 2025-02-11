@@ -8,6 +8,16 @@ import 'bluetooth_state.dart';
 class BluetoothBloc extends Bloc<BluetoothEvent, BluetoothState> {
   final BtRepository repository;
 
+
+  @override
+  Stream<int> mapEventToState(BluetoothEvent event) async* {
+    // 이벤트에 따라 상태 변화를 시켜준 뒤 리턴해준다
+      print("KEG mapEventToState #### $event");
+    switch (event) {
+
+    }
+  }
+
   BluetoothBloc({required this.repository}) : super(BluetoothInitial()) {
     on<CheckBluetoothStatusEvent>(_onCheckBluetoothStatus);
     on<ToggleBluetoothEvent>(_onToggleBluetooth);
