@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:toy_flutter/bluetooth_bloc/bluetooth_event.dart';
 import 'package:toy_flutter/bluetooth_bloc/bluetooth_state.dart';
@@ -22,6 +23,9 @@ class BluetoothBloc extends Bloc<BluetoothEvent, BluetoothState> {
     on<CheckBluetoothStatusEvent>(_onCheckBluetoothStatus);
     on<ToggleBluetoothEvent>(_onToggleBluetooth);
     on<RequestPermissionEvent>(_onRequestPermission);
+
+    add(CheckBluetoothStatusEvent());
+
   }
 
   Future<void> _onCheckBluetoothStatus(
