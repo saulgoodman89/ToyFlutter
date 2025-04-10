@@ -7,5 +7,5 @@ import 'package:toy_flutter/code_canvas.dart';
 import 'async/future_ex.dart';
 
 void main() {
-  runApp(Directionality(textDirection: TextDirection.ltr, child: BtStatusScreen()));
+  runApp(Directionality(textDirection: TextDirection.ltr, child: CodeCanvas()));
 }
