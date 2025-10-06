@@ -4,10 +4,14 @@ import 'package:toy_flutter/GetX/get_screen.dart';
 import 'package:toy_flutter/bluetooth_bloc/bt_status_screen.dart';
 import 'package:toy_flutter/code_canvas.dart';
 import 'package:toy_flutter/custom_widget/radar_widget.dart';
+import 'package:toy_flutter/flutter_grammar/operator.dart';
 
 import 'async/future_ex.dart';
 
 void main() {
+  Operator op = Operator();
+  op.nullOp();
+
   runApp(
     MaterialApp(
       home: Scaffold(
