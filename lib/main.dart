@@ -5,12 +5,14 @@ import 'package:toy_flutter/bluetooth_bloc/bt_status_screen.dart';
 import 'package:toy_flutter/code_canvas.dart';
 import 'package:toy_flutter/custom_widget/radar_widget.dart';
 import 'package:toy_flutter/flutter_grammar/operator.dart';
+import 'package:toy_flutter/grammar/mixin/manager.dart';
 
 import 'async/future_ex.dart';
 
 void main() {
-  Operator op = Operator();
-  op.nullOp();
+  Manager manager = Manager();
+  manager.manage();
+  manager.displayCurrentPosition();
 
   runApp(
     MaterialApp(
