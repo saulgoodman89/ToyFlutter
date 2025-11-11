@@ -9,6 +9,7 @@ import 'package:toy_flutter/ca/injection.dart' as di;
 import 'package:toy_flutter/code_canvas.dart';
 import 'package:toy_flutter/custom_widget/radar_widget.dart';
 import 'package:toy_flutter/flutter_grammar/operator.dart';
+import 'package:toy_flutter/flutter_grammar/stream_example_screen.dart';
 import 'package:toy_flutter/grammar/mixin/manager.dart';
 
 import 'async/future_ex.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: BlocProvider(
         create: (_) => NumberTriviaBloc(di.sl()),
-        child: const NumberTriviaPage(),
+        child: StreamExampleScreen(),
       ),
     );
   }

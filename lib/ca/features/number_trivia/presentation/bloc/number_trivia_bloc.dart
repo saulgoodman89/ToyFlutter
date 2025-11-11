@@ -12,6 +12,11 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
   NumberTriviaBloc(this.getTrivia) : super(NumberTriviaInitial()) {
     on<FetchNumberTrivia>((event, emit) async {
       emit(NumberTriviaLoading());
+      /*
+        await getTrivia() 
+        생성자를 초기화 하는 것이 아닌 , call 메서드를 호출하는 것. 
+        Dart 에서 call
+      */
       final result = await getTrivia(GetConcreteNumberTriviaParams(event.number));
       result.fold(
             (Failure f) => emit(NumberTriviaError(f.message)),
